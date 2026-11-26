@@ -124,7 +124,44 @@
   },
   "metaDescription": "Portofolio Maudi Nanda Fitri, lulusan Bimbingan Konseling Islam dengan pengalaman konseling, administrasi, pelayanan, komunikasi, organisasi, psikologi dasar, dan digital marketing.",
   "pageTitle": "Maudi Nanda Fitri — Portofolio",
-  "publications": [],
+  "publications": [
+    {
+      "kind": "JURNAL ILMIAH",
+      "date": "14 JUL 2026",
+      "title": "Makna Pengalaman Residen dalam Bimbingan Keterampilan Vokasional pada Rehabilitasi Narkoba: Sebuah Studi Fenomenologi",
+      "source": "Southeast Asian Journal of Technology and Science, Vol. 7 No. 1, 2026",
+      "detail": "Studi fenomenologi tentang pelaksanaan bimbingan keterampilan vokasional pada residen rehabilitasi narkoba di Instalasi NAPZA RS Jiwa Tampan Pekanbaru.",
+      "role": "Penulis pertama & korespondensi",
+      "url": "https://garuda.kemdiktisaintek.go.id/documents/detail/6450889"
+    },
+    {
+      "kind": "JURNAL ILMIAH",
+      "date": "22 JUN 2026",
+      "title": "Peran Orang Tua (Pengasuh) dan Guru dalam Menjaga Kesehatan Reproduksi Anak Autis di SLBN Kab. Kampar Bangkinang",
+      "source": "Jurnal Psikologi Dinamika, Vol. 9 No. 6 (2025)",
+      "detail": "Studi kualitatif di SLBN Kabupaten Kampar Bangkinang tentang kolaborasi orang tua, guru, dan terapis dalam menjaga kesehatan reproduksi anak autis.",
+      "role": "Penulis pertama",
+      "url": "https://ojs.co.id/1/index.php/jpd/article/view/1734"
+    },
+    {
+      "kind": "JURNAL ILMIAH",
+      "date": "01 OKT 2025",
+      "title": "Program Maghrib Mengaji dalam Upaya Penuntasan Buta Aksara Al-Qur'an di Desa Dayang Suri",
+      "source": "Al-Furqan: Jurnal Agama, Sosial, dan Budaya",
+      "detail": "Pengabdian masyarakat menuntaskan buta aksara Al-Qur'an di Desa Dayang Suri, Siak, lewat program mengaji selepas Maghrib.",
+      "role": "Penulis bersama",
+      "url": "https://publisherqu.com/index.php/Al-Furqan/article/view/3043"
+    },
+    {
+      "kind": "JURNAL ILMIAH",
+      "date": "30 DES 2024",
+      "title": "Peran Ayah dalam Perkembangan Emosional Anak",
+      "source": "Jurnal Psikologi Revolusioner",
+      "detail": "Tinjauan peran ayah dalam perkembangan emosional dan sosial anak serta dampak ketidakhadirannya.",
+      "role": "Penulis bersama",
+      "url": "https://oaj.jurnalhst.com/index.php/jpr/article/view/6937"
+    }
+  ],
   "skills": [
     {
       "category": "Administrasi",
