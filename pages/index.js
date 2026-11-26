@@ -112,6 +112,30 @@ const Home = () => {
         <meta name="description" content={profile.metaDescription} />
         <meta name="theme-color" content="#f5f4ef" />
         <link rel="icon" href={`${basePath}/images/favicon.png`} />
+        {profile.siteUrl ? (
+          <>
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={profile.pageTitle} />
+            <meta property="og:description" content={profile.metaDescription} />
+            <meta property="og:url" content={profile.siteUrl} />
+            <meta
+              property="og:image"
+              content={`${profile.siteUrl}${profile.ogImage}`}
+            />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={profile.pageTitle} />
+            <meta
+              name="twitter:description"
+              content={profile.metaDescription}
+            />
+            <meta
+              name="twitter:image"
+              content={`${profile.siteUrl}${profile.ogImage}`}
+            />
+          </>
+        ) : null}
       </Head>
 
       <div

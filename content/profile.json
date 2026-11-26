@@ -217,5 +217,7 @@
       "role": "PUBLIC SPEAKING",
       "url": null
     }
-  ]
+  ],
+  "siteUrl": "https://maudi-nanda-fitri-profile.vercel.app",
+  "ogImage": "/images/og-image.jpg"
 }
