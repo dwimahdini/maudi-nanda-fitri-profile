@@ -23,14 +23,23 @@ import profile from "../content/profile.json";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const hasPublications = profile.publications.length > 0;
-const numPendidikan = hasPublications ? "04" : "03";
-const numKeahlian = hasPublications ? "05" : "04";
-const numKontak = hasPublications ? "06" : "05";
+const hasOrganizations = (profile.organizations || []).length > 0;
+const numOrganisasi = hasPublications ? "04" : "03";
+const numPendidikan = String(
+  3 + (hasPublications ? 1 : 0) + (hasOrganizations ? 1 : 0)
+).padStart(2, "0");
+const numKeahlian = String(
+  4 + (hasPublications ? 1 : 0) + (hasOrganizations ? 1 : 0)
+).padStart(2, "0");
+const numKontak = String(
+  5 + (hasPublications ? 1 : 0) + (hasOrganizations ? 1 : 0)
+).padStart(2, "0");
 
 const navigation = [
   { label: "Tentang", href: "#tentang" },
   { label: "Pengalaman", href: "#pengalaman" },
   ...(hasPublications ? [{ label: "Publikasi", href: "#publikasi" }] : []),
+  ...(hasOrganizations ? [{ label: "Organisasi", href: "#organisasi" }] : []),
   { label: "Pendidikan", href: "#pendidikan" },
   { label: "Keahlian", href: "#keahlian" },
   { label: "Kontak", href: "#kontak" },
@@ -372,6 +381,58 @@ const Home = () => {
                       >
                         Baca selengkapnya <FaArrowRight aria-hidden="true" />
                       </a>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {hasOrganizations ? (
+          <section className="publications-section" id="organisasi">
+            <div className="content-section">
+              <div className="section-heading reveal">
+                <span className="section-kicker">
+                  {numOrganisasi} — ORGANISASI
+                </span>
+                <span className="section-aside">PENGALAMAN BERORGANISASI</span>
+              </div>
+              <div className="publications-intro reveal">
+                <h2>
+                  Terlibat, berkontribusi, <span>dan bertumbuh.</span>
+                </h2>
+                <p>
+                  {profile.organizations.length} peran organisasi yang dijalani{" "}
+                  {profile.hero.firstName}.
+                </p>
+              </div>
+              <div className="publication-list">
+                {profile.organizations.map((item, index) => (
+                  <article
+                    className="publication-card reveal"
+                    key={item.title}
+                  >
+                    <span className="publication-number">0{index + 1}</span>
+                    <div className="publication-content">
+                      <div className="publication-meta">
+                        <span>{item.kind}</span>
+                        {item.date ? <span>{item.date}</span> : null}
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p className="publication-source">{item.source}</p>
+                      <p className="publication-detail">{item.detail}</p>
+                      <p className="publication-role">{item.role}</p>
+                      {item.url ? (
+                        <a
+                          className="publication-link"
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Baca selengkapnya <FaArrowRight aria-hidden="true" />
+                        </a>
+                      ) : null}
                     </div>
                   </article>
                 ))}
